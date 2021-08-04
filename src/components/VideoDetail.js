@@ -1,9 +1,30 @@
-import React from 'react';
+import React from "react";
+import { Paper, Typography } from "@material-ui/core";
 
-const VideoDetail = () => {
-    return (
-        <h1>This is a video detail component</h1>
-    )
-}
+const VideoDetail = ({ video }) => {
+	//if there's no video
+	if (!video) return <div>Loading...</div>;
+
+	console.log(video.id.videoId);
+
+	//if there is video
+	const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
+
+	return (
+		<React.Fragment>
+			<Paper elevation={6} style={{ height: "70%" }}>
+				<iframe
+					frameborder="0"
+					height="100%"
+					width="100%"
+					title="Video Player"
+					src={videoSrc}
+				/>
+			</Paper>
+
+			<Paper elevation={6} style={{ padding: "15px" }}></Paper>
+		</React.Fragment>
+	);
+};
 
 export default VideoDetail;
