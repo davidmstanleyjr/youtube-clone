@@ -5,8 +5,6 @@ const VideoDetail = ({ video }) => {
 	//if there's no video
 	if (!video) return <div>Loading...</div>;
 
-	console.log(video.id.videoId);
-
 	//if there is video
 	const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
 
@@ -14,7 +12,7 @@ const VideoDetail = ({ video }) => {
 		<React.Fragment>
 			<Paper elevation={6} style={{ height: "70%" }}>
 				<iframe
-					frameborder="0"
+					frameBorder="0"
 					height="100%"
 					width="100%"
 					title="Video Player"
