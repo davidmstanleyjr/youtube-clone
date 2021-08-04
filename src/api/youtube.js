@@ -1,10 +1,5 @@
-import axios from 'axios';
+import axios from "axios";
 
 export default axios.create({
-    baseURL: 'https://www.googleapis.com/youtube/v3',
-    params: {
-        part: 'snippet',
-        maxResults: 5, 
-        key: 'AIzaSyDuleaZQ3NBT6v-xtcuZv84WTbaZCllH6Y'
-    }
-})
+	baseURL: "https://www.googleapis.com/youtube/v3",
+});
